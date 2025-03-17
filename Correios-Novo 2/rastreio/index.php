@@ -36,6 +36,17 @@ $_SESSION['data_atual'] = date("d/m/Y", strtotime("+1 day"));
 </head>
 
 <body class="">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cpf = sessionStorage.getItem("cpf") || "CPF não disponível";
+        const nome = sessionStorage.getItem("nome") || "Nome não disponível";
+        const dataAtual = sessionStorage.getItem("data_atual") || "Data Indisponível";
+
+        document.getElementById("cpf_info").innerText = cpf;
+        document.getElementById("nome_info").innerText = nome;
+        document.getElementById("data_info").innerText = dataAtual;
+    });
+</script>
     <div id="site" tyle="white-space: normal;">
         <div id="b_1225979_1_1736606248678282284c60c" class="gpc-b" style="white-space: normal;">
             <div class="gpc-b_sobreposicao"></div>
@@ -52,7 +63,7 @@ $_SESSION['data_atual'] = date("d/m/Y", strtotime("+1 day"));
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
                         <p><span><br></span></p>
-                        <p><span><br><?php echo isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : 'Nome não disponível'; ?></span></p>
+                        <p><span><br><span id="nome_info">Nome não disponível</span></span></p>
                     </div>
                 </div>
                 <div id="e_1225979_1_51231_m" class="gpc-e e_texto dm dm e_1225979_1_51231"
@@ -67,7 +78,7 @@ $_SESSION['data_atual'] = date("d/m/Y", strtotime("+1 day"));
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
                         <p><span><br><br></span></p>
-                        <?php echo isset($_SESSION['cpf']) ? htmlspecialchars($_SESSION['cpf']) : 'CPF não disponível'; ?>
+                        <p id="cpf_info">CPF não disponível</p>
                     </div>
                 </div>
                 <div id="e_1225979_1_83162_m" class="gpc-e e_texto dm dm e_1225979_1_83162"
@@ -110,10 +121,10 @@ $_SESSION['data_atual'] = date("d/m/Y", strtotime("+1 day"));
                 <div id="e_1225979_1_65553" class="gpc-e e_texto dd dm e_1225979_1_65553" style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
                         <p><span>Nome Completo:</span></p>
-                        <p><span><b><?php echo isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : 'Nome não disponível'; ?><br><br></b>CPF:<b> <?php echo isset($_SESSION['cpf']) ? htmlspecialchars($_SESSION['cpf']) : 'CPF não disponível'; ?><br><br></b>Prazo para
+                        <p><span><b><span id="nome_info">Nome não disponível</span><br><br></b>CPF:<b> <span id="cpf_info">CPF não disponível</span><br><br></b>Prazo para
                                 regularização:<b>
-                                <p><span><?php echo isset($_SESSION['data_atual']) ? htmlspecialchars($_SESSION['data_atual']) : 'Data Indisponível'; ?></span></p>
-</b></span></p>
+                                <p><span id="data_info">Data Indisponível</span></p>
+                            </b></span></p>
                     </div>
                 </div>
                 <br><br>
